@@ -1,0 +1,21 @@
+server:
+  port: 2238
+spring:
+  application:
+    name: Employee-jpastreamer
+  datasource:#DataSourceSettings#
+#LocalDataSource: sud@localhost
+#BEGIN#
+  <data-source source="LOCAL" name="sud@localhost" uuid="1e80885b-0cab-4638-98aa-9a3083e3587e"><database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL"/><driver-ref>mysql.8</driver-ref><synchronize>true</synchronize><jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver><jdbc-url>jdbc:mysql://localhost:3306/sud</jdbc-url><jdbc-additional-properties><property name="com.intellij.clouds.kubernetes.db.host.port"/><property name="com.intellij.clouds.kubernetes.db.enabled" value="false"/><property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment"/><property name="com.intellij.clouds.kubernetes.db.container.port"/></jdbc-additional-properties><secret-storage>master_key</secret-storage><user-name>root</user-name><schema-mapping/><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#
+
+
+url: jdbc:mysql://localhost:3306/sud
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
